@@ -11,5 +11,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mysia14/Json-express-activity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mysia14/Json-express-activity/issues"
+  },
+  "homepage": "https://github.com/Mysia14/Json-express-activity#readme"
 }
