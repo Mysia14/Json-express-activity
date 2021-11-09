@@ -1,10 +1,10 @@
-// building the router
+// Importing Modules //
 
 const express = require('express');
 const router = express.Router();
 
-const findPhotoServer = require('../findPhoto.js')
-const randomItem = require('../random-item.js');
+const findPhotoServer = require('../findPhoto.js') // import findPhoto module
+const randomItem = require('../random-item.js'); // import random image/item ,module
 
 
 // Defining API routes and middle //

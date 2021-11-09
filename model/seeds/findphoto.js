@@ -1,6 +1,4 @@
-module.exports = findPhoto
-
-const photosILove = [{
+module.exports = [{
 
         id: "0",
         title: "lake",
@@ -26,7 +24,7 @@ const photosILove = [{
     {
         id: "2 ",
         title: "dunes",
-        description: " ",
+        description: "dunes ",
         width: "300",
         height: "300",
         pathurl: "dunes.jpg",
@@ -37,7 +35,7 @@ const photosILove = [{
     {
         id: "nature4 ",
         title: "cabin ",
-        description: "a charig cabin during the fall",
+        description: "a charmin cabin during the fall",
         width: "300",
         height: "300",
         pathurl: "cabin-fall.jpg",
