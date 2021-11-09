@@ -3,8 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
-const findPhotoServer = require('./findPhoto.js')
-const randomItem = require('./random-item.js');
+const findPhotoServer = require('../findPhoto.js')
+const randomItem = require('../random-item.js');
 
 
 // Defining API routes and middle //
