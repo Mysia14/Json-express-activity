@@ -1,52 +1,33 @@
-const dotenv = require('dotenv').config()
-const express = require('express');
+// Import Modules
+
+const dotenv = require('dotenv').config() // import dotenv module
+const express = require('express'); // import express module
 const app = express();
 
 
+app.use(express.static('public')) // Serve static files using middleware
 
-const api = require('../api.js')
-app.use('/api/findPhoto', api)
+const api = require('./routes/api') // import api module
 
-//console.log('randomItem')
-//console.log(randomItem (findPhotoServer))
-//const inputValue = process.argv[2];
+app.use('/SAIT2021/JS/cpnt262-a5-draft/model/seeds/findphoto.js', api) // middleware api
 
 
-
-// Dynamic JSON Endpoint
-app.get('/api/photosILove', function(request, response) {
-    response.send(photosILove)
-})
-
-if (request.query.filter === "") {
-    console.log(request.query)
-}
-// Item route
-app.get('/api/photosILove/:id', function(request, response) {
-    //const item = randomItem (photosILove)???
-    const findPhoto = photosILove.find(function(item) {
-        return Number(inputValue) === item.id;
-        if (request.params.id === item.id) {
-            return true
-        } else false
-    });
-    response.send(findPhoto)
-
-})
-
-//console.log(findPhoto)
-console.log("Found a photo", findPhoto);
-//console.log("No photo found, Please try again");
-
-// Use Array.find() here
-
+const mongoose = require('.model/connections') // import connection module
 
 
 // Handle 404 errors with middleware - should be html5 error handler
 
 app.use(function(request, response) {
-    response.status(404)
-    response.send('<h1>404: File Not Found</h1>') //****create a html error page
+    try {
+        if (request.url.startsWith('/api')) {
+            response.status(404).send({ error: 'Not Found' }); //json 404 error
+        } else {
+            response.status(404).redirect('/SAIT2021/JS/cpnt262-a5-draft/public/404.html') //****create a html error page
+        }
+    } catch {
+        response.status(404).send({ error: 'Not Found' })
+    }
+
 });
 
 // Start server
