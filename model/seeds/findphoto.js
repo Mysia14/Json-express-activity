@@ -1,4 +1,4 @@
-module.exports = [{
+const imageList = [{
 
         id: "0",
         title: "lake",

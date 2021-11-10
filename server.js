@@ -7,12 +7,12 @@ const app = express();
 
 app.use(express.static('public')) // Serve static files using middleware
 
-const api = require('./routes/api') // import api module
+const api = require('./routes/api.js') // import api module
 
-app.use('/SAIT2021/JS/cpnt262-a5-draft/model/seeds/findphoto.js', api) // middleware api
+app.use('/', api) // middleware api
 
 
-const mongoose = require('.model/connections') // import connection module
+//const mongoose = require('./model/connections.js') // import mongoose// connection module
 
 
 // Handle 404 errors with middleware - should be html5 error handler
