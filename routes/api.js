@@ -12,7 +12,7 @@ const randomItem = require('./random-item.js'); // import random image/item ,mod
 
 
 
-router.get('/api/photosILove', async function(request, response) {
+router.get('/api/findPhoto', async function(request, response) {
 
         try {
 

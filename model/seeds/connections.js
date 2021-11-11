@@ -1,6 +1,8 @@
 /***********************/
 /* Connect to Database */
 /***********************/
+const express = require('express')
+const router = express.Router()
 const mongoose = require('mongoose') // import mongoose module
 const dotenv = require('dotenv').config() // import dotenv module
 

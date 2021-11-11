@@ -9,7 +9,7 @@ app.use(express.static('public')) // Serve static files using middleware
 
 const api = require('./routes/api.js') // import api module
 
-app.use('/', api) // middleware api
+app.use('/api', api) // middleware api
 
 
 //const mongoose = require('./model/connections.js') // import mongoose// connection module
@@ -20,12 +20,13 @@ app.use('/', api) // middleware api
 app.use(function(request, response) {
     try {
         if (request.url.startsWith('/api')) {
-            response.status(404).send({ error: 'Not Found' }); //json 404 error
+            response.status(404).send({ error: ' File Not Found' }); //json 404 error
+            console.log(response.status)
         } else {
-            response.status(404).redirect('/SAIT2021/JS/cpnt262-a5-draft/public/404.html') //****create a html error page
+            response.status(404).redirect('404.html') //****create a html error page
         }
     } catch {
-        response.status(404).send({ error: 'Not Found' })
+        response.status(404).send({ error: ' So sorry but the Page is Not Found' })
     }
 
 });

@@ -11,4 +11,4 @@ const photoSchema = new mongoose.Schema({
     creditURL: String,
 })
 
-module.exports = mongoose.model('findphoto', photoSchema) // export mongoose
+module.exports = mongoose.model('findPhoto', photoSchema) // export mongoose

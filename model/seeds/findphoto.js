@@ -1,4 +1,4 @@
-const imageList = [{
+const findPhoto = [{
 
         id: "0",
         title: "lake",
