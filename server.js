@@ -7,12 +7,9 @@ const app = express();
 
 app.use(express.static('public')) // Serve static files using middleware
 
-const api = require('./routes/api.js') // import api module
+const api = require('./routes/api') // import api module
 
 app.use('/api', api) // middleware api
-
-
-//const mongoose = require('./model/connections.js') // import mongoose// connection module
 
 
 // Handle 404 errors with middleware - should be html5 error handler
@@ -20,7 +17,7 @@ app.use('/api', api) // middleware api
 app.use(function(request, response) {
     try {
         if (request.url.startsWith('/api')) {
-            response.status(404).send({ error: ' File Not Found' }); //json 404 error
+            response.status(404).send({ error: ' Ops, File Not Found' }); //json 404 error
             console.log(response.status)
         } else {
             response.status(404).redirect('404.html') //****create a html error page

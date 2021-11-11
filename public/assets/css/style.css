@@ -5,10 +5,11 @@ body {
 
 h2 {
     margin: 80px 0 0;
+    background-color: #520feebe;
 }
 
 pre {
-    background-color: #520feebe;
+    
     border-radius: .6rem;
     padding: 1rem 1rem;
     color: #f8f8ff;
@@ -23,16 +24,7 @@ section {
 }
 
 img {
-    width: 35%;
-}
-
-a {
-    text-decoration: none;
-    color: #deb887;
-}
-
-a:hover {
-    color: #00ffea;
+    width: 55%;
 }
 
 li {

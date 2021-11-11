@@ -1,10 +1,10 @@
 // Importing Modules //
 
-const express = require('express');
-const router = express.Router();
+const express = require('express'); // runs express
+const router = express.Router(); //connect server.js
 
-const Photos = require('../model/seeds/findphoto.js') // import findPhoto module
-const finder = require('../model/seeds/findphoto.js') // import findPhoto module
+const Photos = require('../model/seeds/findphoto') // import findPhoto module
+
 const randomItem = require('./random-item.js'); // import random image/item ,module
 
 
@@ -12,11 +12,11 @@ const randomItem = require('./random-item.js'); // import random image/item ,mod
 
 
 
-router.get('/api/findPhoto', async function(request, response) {
+router.get('/findPhoto', async function(request, response) {
 
         try {
 
-            let data = await Photos.find() // to find all images
+            let data = await picture.find() // to find all images
 
             //check if mongoose is inoperable or non-existent
             if (data.length === 0) {
@@ -49,14 +49,14 @@ router.get('/api/findPhoto', async function(request, response) {
 
 
 
-router.get('/api/photosILove/:id', async function(request, response) {
+router.get('/findPhoto/:id', async function(request, response) {
 
     //const item = randomItem (photosILove)???
     try {
-        let data = await Photos.findOne({ id: request.params.id })
+        let data = await picture.findOne({ id: request.params.id })
 
         if (!data) {
-            data = finder.find(image => image.id === request.params.id) // to find local module
+            data = finder.find(image => Number(request.params.id) === image.id) /// to find local module
         }
         if (data) { //check for mongoose
             response.send(data)

@@ -5,5 +5,9 @@ Author: Mysia Santana
 * GH repo:
 * Heroku Page:
 
+
+## Attention:
+ - 
 ## Attributions:
- - Code structure : Tony Grimmes
+ - Code and modules structure: [Tony Grimmes](https://github.com/acidtone)
+ - I get some tips about some errors that I was getting through [Fesal's](https://github.com/FesalBadday/cpnt262-a5) code.

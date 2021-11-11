@@ -111,3 +111,4 @@ const findPhoto = [{
     }
 
 ];
+module.exports = findPhoto
