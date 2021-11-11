@@ -8,4 +8,4 @@ Author: Mysia Santana
 ## Attributions:
  - Code and modules structure: [Tony Grimmes](https://github.com/acidtone).
  - I get some tips about some errors that I was getting through [Fesal's](https://github.com/FesalBadday/cpnt262-a5) code and some tips from [Icah](https://github.com/Icahpv/).
- - Images from [Khorfi_vahle]((https://pixabay.com/users/kordi_vahle-4934524/).
+ - Images from [Khorfi_vahle](https://pixabay.com/users/kordi_vahle-4934524/).
