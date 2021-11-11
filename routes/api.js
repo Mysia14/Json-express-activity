@@ -3,16 +3,16 @@
 const express = require('express'); // runs express
 const router = express.Router(); //connect server.js
 
-const Photos = require('../model/seeds/findphoto') // import findPhoto module
+const picture = require('../model/seeds/findphoto.js') // import findPhoto module
 
 const randomItem = require('./random-item.js'); // import random image/item ,module
 
 
-// Defining API routes and middle //
+// Defining API routes//
 
 
 
-router.get('/findPhoto', async function(request, response) {
+router.get('/findphoto', async function(request, response) {
 
         try {
 
